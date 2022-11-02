@@ -19,11 +19,11 @@
 }
 
 body{
-    background: #000000;
+    background: #000;
     margin: 30px;
     color: var(--naranja-principal);
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -39,7 +39,8 @@ body{
 
 .linea{
     height: 300px;
-    border-left: 2px solid var(--naranja-principal);
+    background-color: var(--naranja-principal);
+    width: 2px;
     position: absolute;
     left: 69px;
     top: 180px;
@@ -48,22 +49,65 @@ body{
 
 .lista-programas{
     width: 80px;
+
 }
 
 .logo-prog{
     width: 40px;
     display: block;
-    margin: 20px;
+    margin: 20px;    
+    position: relative;
     z-index: 9;
 }
 
-header{
-    width: 75vw;
-    height: 100vh;
+.secciones{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    align-items: center;
 }
 
+
+.hexag-seccion{
+    width: 90px;
+    margin: 10px;
+}
+
+.play{
+    width: 40px;
+    margin: 40px 24px;
+
+}
+
+header{
+    width: 80vw;
+    align-self: center;
+}
+
+.principal{
+    margin: auto;
+    width: 465px;
+    margin-top: 25vh;
+}
 
 h2{
     font-size: 18px;
     letter-spacing: 8.5px;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 150px;
+    margin: 15vh auto 0;
+}
+
+a{
+    color: var(--naranja-principal);
+}
+
+a:hover{
+    color: #fff;
+    transition: 0.5s;
 }
