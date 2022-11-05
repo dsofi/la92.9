@@ -1,113 +1,190 @@
-
 @font-face {
-    font-family: Mulish;
-    src: url(/recursos/mulish-font.ttf);
+  font-family: Mulish;
+  src: url(./recursos/mulish-font.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Mulish, sans-serif;
+  list-style: none;
+}
+
+:root {
+  --naranja-principal: #f38026;
+}
+
+body {
+  background: #000;
+  color: var(--naranja-principal);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px;
+}
+
+.lista-programas {
+  width: 80px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-radio {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.hexag-prog {
+  width: 40px;
+  margin: auto;
+  position: relative;
+  z-index: 9;
+}
+
+.play {
+  width: 30px;
+  margin: auto;
+}
+
+.logo-prog {
+  width: 40px;
+  margin: 5px 0;
+  z-index: 9;
+}
+
+.linea {
+  height: 300px;
+  width: 2px;
+  background-color: var(--naranja-principal);
+  position: absolute;
+  left: 19px;
+  top: 10px;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 90vh;
+  max-width: 1000px;
+}
+
+.secciones {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 60px;
+}
+
+.hexag-seccion {
+  width: 90px;
+}
+
+.principal {
+  margin-top: 25vh;
+}
+
+h2 {
+  font-size: 18px;
+  letter-spacing: 8px;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: auto;
+}
+
+a {
+  color: var(--naranja-principal);
+}
+
+a:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+@media (max-width: 900px) {
+  body {
+    height: 96vh;
+    margin: 2vh;
+    min-height: 600px;
   }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: Mulish, sans-serif;  
-    list-style: none;
+  .hexag-prog {
+    display: none;
+  }
 
-}
-
-:root{
-    --naranja-principal: #f38026;
-}
-
-body{
-    background: #000;
-    margin: 30px;
-    color: var(--naranja-principal);
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.nav{
-    width: 20vw;
-    height: 100vh;
-}
-
-.logo-radio{
-    width: 80px;
-    margin-bottom: 40px;
-}
-
-.linea{
-    height: 300px;
-    background-color: var(--naranja-principal);
-    width: 2px;
+  .lista-programas {
     position: absolute;
-    left: 69px;
-    top: 180px;
-    z-index: 1;
-}
-
-.lista-programas{
-    width: 80px;
-
-}
-
-.logo-prog{
-    width: 40px;
-    display: block;
-    margin: 20px;    
-    position: relative;
-    z-index: 9;
-}
-
-.secciones{
-    display: flex;
-    justify-content: center;
-    margin-top: 10vh;
-    align-items: center;
-}
-
-
-.hexag-seccion{
-    width: 90px;
-    margin: 10px;
-}
-
-.play{
-    width: 40px;
-    margin: 40px 24px;
-
-}
-
-header{
-    width: 80vw;
-    align-self: center;
-}
-
-.principal{
-    margin: auto;
-    width: 465px;
-    margin-top: 25vh;
-}
-
-h2{
-    font-size: 18px;
-    letter-spacing: 8.5px;
-}
-
-.redes{
-    display: flex;
+    height: 90vh;
     justify-content: space-between;
-    align-items: flex-end;
-    width: 150px;
-    margin: 15vh auto 0;
+    min-height: 500px;
+  }
+
+  .play {
+    transform: scale(150%);
+    position: relative;
+    top: 20vh;
+  }
+
+  header {
+    margin-top: -6vh;
+    width: 100%;
+  }
+
+  .principal {
+    transform: scale(60%);
+  }
+
+  h2 {
+    letter-spacing: 7.9px;
+    margin-top: 20px;
+  }
+
+  .redes {
+    margin-top: 35vh;
+  }
+
+  .secciones {
+    max-width: 400px;
+    margin-top: 2vh;
+  }
+
+  .secciones img:nth-last-child(-n + 5) {
+    display: none;
+  }
 }
 
-a{
-    color: var(--naranja-principal);
+@media (min-width: 1600px) {
+  body {
+    justify-content: center;
+    gap: 20px;
+  }
+  .la92 {
+    margin-top: 10vh;
+  }
 }
 
-a:hover{
-    color: #fff;
-    transition: 0.5s;
+@media (min-width: 1900px) {
+  .principal {
+    margin-top: 0;
+  }
+  .redes {
+    margin-top: 10vh;
+  }
+  body {
+    gap: 50px;
+  }
 }
